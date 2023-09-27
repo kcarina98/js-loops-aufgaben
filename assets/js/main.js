@@ -49,13 +49,13 @@ for (let i = 1; i <= 100; i++) {
 // - level 2_2
 console.log("%c Level 2-2", "color: tomato; background-color: yellow");
 
-function loopMe() {
-  let o = Number(document.querySelector("#o").value);
+// function loopMe() {
+//   let o = Number(document.querySelector("#o").value);
 
-  for (let i = -1; i < o; i++) {
-    document.querySelector(".loop").innerHTML = ["L" + "o".repeat(o) + "p"];
-  }
-}
+//   for (let i = -1; i < o; i++) {
+//     document.querySelector(".loop").innerHTML = ["L" + "o".repeat(o) + "p"];
+//   }
+// }
 
 // - level 3_2
 console.log("%c Level 3-2", "color: tomato; background-color: yellow");
@@ -63,12 +63,12 @@ console.log("%c Level 3-2", "color: tomato; background-color: yellow");
 let numArr = [5, 22, 15, 100, 55];
 
 for (let i = 0; i < numArr.length; i++) {
-  // bei 2 anfangen, da durch 0 nicht geht und durch 1 schon gegeben ist
-  for (let j = 2; j < numArr[i]; j++) {
-    if (numArr[i] % [j] == 0) {
+  for (let elt = 0; elt < numArr[i]; elt++) {
+    // - wenn die Zahl (numArr[i]) geteilt durch eine andere Zahl (elt) null ergibt && die Zahl durch die geteilt wird (elt) nicht 0 && nicht 1 ist
+    if (numArr[i] % [elt] === 0 && [elt] != 0 && [elt] != 1) {
       document.write(
-        `${numArr[i]} is devidable by ${j}. The result is: ${
-          numArr[i] / [j]
+        `${numArr[i]} is devidable by ${elt}. The result is: ${
+          numArr[i] / [elt]
         } <br>`
       );
     } else {
